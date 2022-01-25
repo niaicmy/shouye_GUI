@@ -1,0 +1,30 @@
+{
+  "name": "BingAnShouYe",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "his_config": {
+    "host": "192.168.2.2",
+    "user": "WIN-MF9IHHSKADB\\Administrator",
+    "password": "123456",
+    "database": "HIS"
+  },
+  "emr_config": {
+    "host": "192.168.2.2",
+    "user": "WIN-MF9IHHSKADB\\Administrator",
+    "password": "123456",
+    "database": "EMR"
+  },
+  "sql_select_config": {
+    "his_data_select": "SELECT * FROM icd_back2019",
+    "his_update_staff_records": "SELECT 编号, 名称, 身份证号, 联系电话 FROM [HIS].[dbo].[T员工档案] WHERE 有效状态='可用'",
+    "emr_data_select": "Select 病案项目,Sum(金额) As 金额 From GetHIS病案首页费用({0}) Group by 病案项目",
+    "emr_data_select_bak": "SELECT A.*, B.* FROM M住院病案_首页附加信息 A INNER JOIN M住院病案_首页基本信息 B ON B.系统序号 = A.首页序号  WHERE B.出院医嘱下达时间 BETWEEN '{0} 00:00:00'  AND '{1} 23:59:59' ORDER BY B.出院医嘱下达时间 ASC"
+  },
+  "bak_config": {
+    "host": "192.168.2.2",
+    "user": "hfhis",
+    "password": "999999",
+    "database": "HIS"
+  }
+}
