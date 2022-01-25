@@ -566,9 +566,9 @@ def make_excel(source_path, staff_records_path, sql_config_path):
     sheet['M64'].value = expense_dict.get('其他类_其他费', 0.00)
     # 第六十五行 人员信息
     # todo: 最后一行人员信息修改位置
-    sheet['D65'].value = '罗志平'
-    # sheet['F63'].value = '侯锡文'
-    sheet['F65'].value = '杨大林'
+    sheet['D65'].value = ''
+    # sheet['F63'].value = '文'
+    sheet['F65'].value = '林'
     sheet['I65'].value = ''
     sheet['K65'].value = '02882517666'
     sheet['M65'].value = '02882517666'
